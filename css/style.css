@@ -85,20 +85,18 @@ nav{
 }
 /* section one ends here */
 
-/* brands row starts here */
-.img_row_section p{
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 0px 10px 20px;
-}
-.img_row{
+/* gallery */
+.gallery{
     display: flex;
-    padding-bottom: 40px;
+    flex-wrap: wrap;
+    width: 100%;
 }
-.img_row img{
-    width: 150px;
+.flexbox-item img{
+    width: 290px;
+    height: 400px;
+    margin: 10px 15px 10px 10px;
 }
-/* brands row ends here */
+/* gallery */
 
 /* promise starts here */
 .promise{
