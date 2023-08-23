@@ -2,4 +2,11 @@
     nav{
         display: none;
     }
+    .section_txt_one{
+        font-size: 20px;
+    }
+    .section_txt_two{
+        font-size: 35px;
+    }
+    
 }
