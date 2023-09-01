@@ -1,12 +1,129 @@
-@media (min-width: 320px){
+/* all mobile screen */
+@media (max-width: 450px){
+    *{
+        overflow-x: hidden;
+    }
     nav{
         display: none;
     }
+    /* welcome section */
     .section_txt_one{
         font-size: 20px;
     }
     .section_txt_two{
         font-size: 35px;
     }
-    
+    .welcome_section img{
+        border-radius: 0px;
+    }
+    /* welcome section */
+   
+    /* promise  */
+    .promise{
+        display: block;
+    }
+    .promise_two span{
+        display: none;
+    }
+    /* promise  */
+
+    /* guarantee_section */
+    .guarantee_section{
+        display: block;
+        margin: 0px 5px 0px 5px;
+    }
+    .row_item{
+        margin: 30px 0px 0px 0px;
+    }
+    /* guarantee_section */
+
+    /* featured_products */
+    .featured_products_row{
+        display: block;
+    }
+    .featured_products{
+        padding: 10px;
+    }
+    .centered a{
+        color: #ffff;
+    } 
+    .centered span{
+        display: none;
+    }
+    .sm-one{
+        margin: 70px 0px 0px 0px;
+    }
+    .featured_products_img{
+        height: 60%;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    /* featured_products */
+
+    /* newsletter */
+    .newsletter{
+        padding: 10px;
+    }
+    .newsletter_text_two{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        margin: 20px 5px;
+    }
+    .subscribe_input{
+        padding-bottom: 40px;
+    }
+    /* newsletter */
+
+    /* footer */
+    footer{
+        display: block;
+        padding-bottom: 30px;
+    }
+    .footer_icon_row{
+        padding: 20px 0px 10px 0px;
+    }
+    .footer_tag_head{
+        color: #FA8A28;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    /* footer */
+
+    /* shop page */
+    .shop_view_selection{
+        display: block;
+        padding: 10px 0px 30px 0px;
+    }
+    .sort{
+        margin: 20px 0px 0px 0px;
+    }
+    .product_list{
+        margin: auto;
+        margin-top: 30px;
+    }
+    .product_name{
+        font-weight: 600;
+        color: red;
+    }
+    .product_id{
+        font-weight: 600;
+    }
+    .price_diff{
+        font-size: 20px;
+    }
+    .add_to_cart{
+        
+    }
+    .new_price{
+        display: flex;
+    }
+    .old_price{
+        text-decoration: line-through;
+        color: gray;
+    }
+    /* shop page */
 }
+
+/* all mobile screen */

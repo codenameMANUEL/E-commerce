@@ -16,7 +16,6 @@ nav{
     height: 65px;
     width: 100%;
     justify-content: space-between;
-    position: relative;
 }
 .logo img{
     width: 120px;
@@ -50,7 +49,7 @@ nav{
     position: relative;
 }
 .welcome_section img{
-    border-radius: 0px 0px 50px 50px ;
+    border-radius: 0px 0px 50px 50px;
     height: 500px;
 }
 .welcome_text{
@@ -285,7 +284,7 @@ footer{
 }
 .product_list{
     width: 280px;
-    background-color: #b0d8f8;
+    background-color: #e9e2e1;
     color: #000000;
     margin: 20px 10px 0px 5px;
 }
