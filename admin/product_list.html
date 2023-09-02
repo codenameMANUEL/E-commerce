@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="admin.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include DataTables plugin -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
 
@@ -23,10 +28,26 @@
             </div>
         </div>
         <div class="right_side">
-            <p>product list</p>
-        </div>
+            <table id="myTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>bajan</td>
+                        <td>imainmak</td>
+                        <td>iaja ka k</td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>  
     </div>
-    
-    <script src="admin.js"></script>
+
+
+<script src="admin.js"></script>
 </body>
 </html>

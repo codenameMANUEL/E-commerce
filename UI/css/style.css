@@ -372,9 +372,6 @@ footer{
 .billing_details{
     width: 50%;
 }
-.cart_details{
-    width: 50%;
-}
 .first_name_details input{
     width: 250px;
     font-size: 20px;
@@ -396,7 +393,7 @@ footer{
 }
 .billing_add textarea{
     width: 560px;
-    height: 200px;
+    height: 100px;
 }
 .billing_tel_num{
     padding-top: 20px;
@@ -408,5 +405,51 @@ footer{
     height: 50px;
     font-size: 25px;
 }
+form button{
+    padding: 10px 20px 10px 20px;
+    margin-top: 20px;
+}
+.cart_details{
+    width: 50%;
+}
+.cart_details{
+    display: flex;
+    justify-content: center;
+}
+.cart_details button{
+    background-color: #10dd21;
+    color: #ffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+}
 /* checkout page */
 
+/* cart page */
+.cartIntro{
+    font-size: 20px;
+    padding: 20px;
+}
+.unavaliablelist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.unavaliablelist p{
+    font-size: 30px;
+}
+.unavaliablelist a{
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.unavaliablelist button{
+    padding: 20px;
+    background-color: #FA8A28;
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+}
+/* cart page  */

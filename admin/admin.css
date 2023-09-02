@@ -1,5 +1,4 @@
 /* admin */
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-bag.css');
 *{
     margin: 0;
     padding: 0;
@@ -56,6 +55,7 @@
 .upload_section{
     width: 500px;
     background-color: #03579E;
+    padding: 20px;
 }
 .product_view{
     width: 500px;
@@ -68,22 +68,15 @@
     padding: 10px 90px 10px 0px;
     font-size: 15px;
 }
+.upload_section button{
+    margin: 20px 0;
+    padding: 10px 30px 10px 30px;
+    font-size: 15px;
+    border: none;
+    background-color: #FA8A28;
+    color: #ffff;
+}
 .right_side_users{
     margin-left: 250px;
-}
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-  
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-  
-tr:nth-child(even) {
-    background-color: #dddddd;
 }
 /* admin */
