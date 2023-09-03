@@ -149,6 +149,15 @@
         padding: 30px 0px 30px 0px;
     }
     /* product page */
+
+    /* checkout page */
+    .checkout_row{
+        display: block;
+    }
+    .billing_details{
+        width: 400px;
+    }
+    /* checkout page  */
 }
 
 /* all mobile screen */
