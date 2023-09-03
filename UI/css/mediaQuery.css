@@ -124,6 +124,31 @@
         color: gray;
     }
     /* shop page */
+
+    /* product page */
+    .product_view{
+        display: block;
+    }
+    .product_img img{
+        width: 300px;
+        object-fit: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product_categ{
+        font-size: 30px;
+    }
+    .price_diff{
+        padding: 20px 10px;
+    }
+    .desc{
+        padding-left: 20px;
+    }
+    .product_add_to_cart{
+        padding: 30px 0px 30px 0px;
+    }
+    /* product page */
 }
 
 /* all mobile screen */
