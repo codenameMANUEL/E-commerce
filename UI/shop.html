@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mediaQuery.css">
 </head>
@@ -14,20 +15,20 @@
 
     <nav>
         <div class="logo">
-            <img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png" alt="">
+            <a href="index.html"><img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png"alt=""></a>
         </div>
         <div class="list_items">
             <ul>
                 <a href="index.html"><li>Home</li></a>
-                <a href="shop.html">
-                    <li>Shop</li>
-                </a>
+                <a href="shop.html"><li>Shop</li></a>
                 <li>About Us</li>
                 <li>Contact Us</li>
-                <div class="search">
-                    <input type="search" placeholder="Search products...">
-                </div>
-                <a href="#"><li><i class="gg-shopping-bag"></i></li>0</a>
+                <a href="cart.html">
+                    <li>
+                        <i class="gg-shopping-bag"></i>
+                        <span id="cart-item-count"></span>
+                    </li>
+                </a>
             </ul>
         </div>
     </nav>
@@ -66,7 +67,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -82,7 +83,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -98,7 +99,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -114,7 +115,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -130,7 +131,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -146,7 +147,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -162,7 +163,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -178,7 +179,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -194,7 +195,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart" data-attr="2222">ADD TO CART</button>
             </div>
             <div class="product_list">
                 <div class="container">
@@ -210,7 +211,7 @@
                     <p class="old_price">&#8358;40,000</p>
                     <p class="new_price">&#8358;20,000</p>
                 </div>
-                <button class="add_to_cart">ADD TO CART</button>
+                <button class="add_to_cart"  data-attr="1234">ADD TO CART</button>
             </div>
         </div>
     </div>
