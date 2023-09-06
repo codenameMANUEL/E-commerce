@@ -3,9 +3,6 @@
     *{
         overflow-x: hidden;
     }
-    nav{
-        display: none;
-    }
     /* welcome section */
     .section_txt_one{
         font-size: 20px;
@@ -156,6 +153,9 @@
     }
     .billing_details{
         width: 400px;
+    }
+    .last_name_details{
+        
     }
     /* checkout page  */
 }

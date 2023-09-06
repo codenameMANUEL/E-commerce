@@ -9,16 +9,20 @@
 <body>
     
 
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png"alt=""></a>
-        </div>
-        <div class="list_items">
-            <ul>
-                <a href="index.html"><li>Home</li></a>
-                <a href="shop.html"><li>Shop</li></a>
-                <li>About Us</li>
-                <li>Contact Us</li>
+    <header class="navigation">
+        <nav class="nav">
+          <h3 class="nav-logo">
+            <img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png" alt="">
+          </h3>
+          <div class="nav-sub">
+            <input type="checkbox" id="menu" />
+            <ul class="nav-menu nav-menu__1"> 
+            </ul>
+            <ul class="nav-menu nav-menu__2 hide">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html" class="hide">About Us</a></li>
+                <li><a href="contact.html" class="hide">Contact Us</a></li>
                 <a href="cart.html">
                     <li>
                         <i class="gg-shopping-bag"></i>
@@ -26,8 +30,12 @@
                     </li>
                 </a>
             </ul>
-        </div>
-    </nav>
+          </div>
+            <label for="menu" class="hamburger">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+            </label>
+        </nav>
+      </header>
 
     
 </body>

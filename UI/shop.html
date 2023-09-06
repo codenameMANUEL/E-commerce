@@ -6,36 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mediaQuery.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
-    <!-- Nav bar -->
+    <!-- NAVBAR  -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png" alt="">
+        </a>
 
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png"alt=""></a>
-        </div>
-        <div class="list_items">
-            <ul>
-                <a href="index.html"><li>Home</li></a>
-                <a href="shop.html"><li>Shop</li></a>
-                <li>About Us</li>
-                <li>Contact Us</li>
-                <a href="cart.html">
-                    <li>
-                        <i class="gg-shopping-bag"></i>
-                        <span id="cart-item-count"></span>
-                    </li>
-                </a>
-            </ul>
-        </div>
-    </nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-dots-horizontal-rounded' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
 
-    <!-- Nav bar -->
+        <nav class="navbar">
+            <a href="index.html" style="--i:0;">HOME</a>
+            <a href="shop.html" style="--i:1;">SHOP</a>
+            <a href="about.html" style="--i:2;">ABOUT</a>
+            <a href="contact.html" style="--i:3;">CONTACT</a>
+            <a href="cart.html" style="--i:4;">
+                <span id="cart-item-count"></span>
+                <i class='bx bx-cart'></i>
+            </a>
+        </nav>
+    </header>
+    <!-- NAVBAR  -->
 
-    <div class="shop_view">
+    <div class="shop_view navspacing">
         <div class="component_tag">
             <p>Shop</p>
         </div>
@@ -69,7 +73,7 @@
                 </div>
                 <button class="add_to_cart" id="addToCart">ADD TO CART</button>
             </div>
-            <div class="product_list">
+            <!-- <div class="product_list">
                 <div class="container">
                     <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
                         alt="">
@@ -212,7 +216,7 @@
                     <p class="new_price">&#8358;20,000</p>
                 </div>
                 <button class="add_to_cart"  data-attr="1234">ADD TO CART</button>
-            </div>
+            </div> -->
         </div>
     </div>
 
