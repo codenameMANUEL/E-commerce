@@ -9,11 +9,12 @@
     text-decoration: none;
     font-family: 'Inconsolata', monospace;
 }
+
+
 .cartIntro{
-    margin-top: 100px;
     font-size: 20px;
-    padding: 20px;
 }
+
 .unavaliablelist{
     display: flex;
     justify-content: center;
@@ -49,9 +50,7 @@
 
 .cart-table th, .cart-table td {
     border: 1px solid #ddd;
-    padding: 8px;
     text-align: center;
-    white-space: nowrap;
 }
 
 .cart-table th {

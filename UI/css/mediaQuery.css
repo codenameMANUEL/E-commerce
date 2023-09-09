@@ -50,6 +50,15 @@
     .sm-one{
         margin: 70px 0px 0px 0px;
     }
+    .row_item_text_one {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .featured_products p {
+        padding: 40px 0px 40px 15px;
+        font-size: 30px;
+        font-weight: 600;
+    }
     .featured_products_img{
         height: 60%;
         margin: 10px;
@@ -89,12 +98,17 @@
     /* footer */
 
     /* shop page */
+    .shop_view {
+        padding: 10px;
+    }
     .shop_view_selection{
         display: block;
         padding: 10px 0px 30px 0px;
+        margin-top: 10px;
     }
     .sort{
-        margin: 20px 0px 0px 0px;
+        width: 270px;
+        margin: 20px 10px 0px 0px;
     }
     .product_list{
         margin: auto;
@@ -102,7 +116,6 @@
     }
     .product_name{
         font-weight: 600;
-        color: red;
     }
     .product_id{
         font-weight: 600;
@@ -110,15 +123,16 @@
     .price_diff{
         font-size: 20px;
     }
-    .add_to_cart{
-        
-    }
     .new_price{
         display: flex;
     }
     .old_price{
         text-decoration: line-through;
         color: gray;
+    }
+    .add_to_cart:hover{
+        background-color: #03579E;
+        border-radius: 0px;
     }
     /* shop page */
 
@@ -129,7 +143,7 @@
     .product_img img{
         width: 300px;
         object-fit: contain;
-        display: flex;
+        display: flex; 
         justify-content: center;
         align-items: center;
     }
@@ -137,7 +151,7 @@
         font-size: 30px;
     }
     .price_diff{
-        padding: 20px 10px;
+        padding: 10px 0px;
     }
     .desc{
         padding-left: 20px;
@@ -147,17 +161,60 @@
     }
     /* product page */
 
-    /* checkout page */
-    .checkout_row{
+    /* CHECKOUT PAGE  */
+    form label{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .loko{
+        display: none;
+    }
+    .firstInitial{
         display: block;
     }
-    .billing_details{
-        width: 400px;
+    .lastnamecheckout{
+        margin: 6px 0px 0px 0px;
     }
-    .last_name_details{
-        
+    .firstnamecheckout input{
+        width: 300px;
     }
-    /* checkout page  */
+    .lastnamecheckout input{
+        width: 300px;
+    }
+    .addressCheckout input{
+        width: 300px;
+    }
+    .cityAddress input{
+        width: 300px;
+    }
+    .PhoneCheckout input{
+        width: 300px;
+    }
+    .mailCheckout input{
+        width: 300px;
+    }
+    /* CHECKOUT PAGE */
+
+    /* CART PAGE  */
+    .cartIntro{
+        margin-top: 90px;
+        padding: 0px;
+    }
+    .unavaliablelist{
+        margin: 10px 0px 0px 40px;
+    }
+    .unavaliablelist button{
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .unavaliablelist button:hover{
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #03579E;
+    }
+    /* CART PAGE  */
 }
 
 /* all mobile screen */

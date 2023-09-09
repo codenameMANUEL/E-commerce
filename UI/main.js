@@ -5,6 +5,7 @@ $(document).ready(function () {
       arr = JSON.parse(localStorage.getItem("carts"));
       count = arr.length;
     }
+    
     $("#cart-item-count").html(count);
   }
   countCartItem();
@@ -98,19 +99,19 @@ $(document).ready(function () {
           ).toLocaleString();
           html += `<div class="product_list">
           <div class="container">
-              <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
+              <img src="${a.avatar}"
                   alt="">
                   <div class="top-right" >
                       <p>sale</p>
                   </div>
           </div>
           <p style="padding-top: 5px; font-size: 20px;" class="product_name">${a.title}</p>
-          <p style="font-size: 14px;" class="product_id">ZFRT98</p>
+          <p style="font-size: 14px;" class="product_id">${a.productId}</p>
           <div class="price_diff">
-              <p class="old_price">&#8358;40,000</p>
+              <p class="old_price">&#8358;${a.old_price}</p>
               <p class="new_price">&#8358;${a.price}</p>
           </div>
-          <button class="add_to_cart" data-attr="${a._id}">ADD TO CART</button>
+          <button class="add_to_cart" data-attr="${a.productId}">ADD TO CART</button>
       </div>`;
         }
         $(".product_row").html(html);
@@ -158,6 +159,58 @@ $(document).ready(function () {
 	// target='_blank'
 	// rel='noreferrer'></a>;
 
+  // CHECKOUT VALUE
+  let firstName = document.getElementById("fristNameCheckout");
+  let lastName = document.getElementById("lastNameCheckout");
+  let address = document.getElementById("addressCheckout");
+  let city = document.getElementById("cityCheckout");
+  let telNumber = document.getElementById("telCheckout");
+  let email = document.getElementById("emailCheckout");
+  let submitButton = document.getElementById("submitButton");
+
+ if(submitButton){
+  submitButton.addEventListener("click", function() {
+  
+    let item = localStorage.getItem('carts')
+    if(item){
+     
+      let arr =  JSON.parse(item);
+      let text =  "Hello welcome to %0D"
+      for (let i = 0; i < arr.length; i++) {
+        let a = arr[i];
+        let total = (
+          parseFloat(a.price.replace("₦", "").replace(",", "")) * parseInt(a.qty)
+        ).toLocaleString();
+      
+      text +=`${a.id} x *${a.qty}*  ${total} %0D` 
+      }
+      let firstNameInputValue = firstName.value;
+      let lastNameInputValue = lastName.value;
+      let addressInputValue = address.value;
+      let cityInputValue = city.value;
+      let telNumberInputValue = telNumber.value;
+      let emailInputValue = email.value;
+      
+      text += `%0D %0D User Details %0D
+      Fullname :*${firstNameInputValue}* *${lastNameInputValue}* %0D
+      Address: *${addressInputValue}* %0D
+      City: *${cityInputValue}* %0D
+      Phone: *${telNumberInputValue}*%0D
+      Email: ${emailInputValue}
+      `
+      localStorage.clear()
+      
+      // location.href="https://google.com"
+      location.href=`https://wa.me/+2348169971030?text=${text}`
+//2347025514897
+      
+
+    }
+
+  });
+ }
+
+
 
   // Attach click event listeners to all delete buttons
   deleteButtons.forEach((button) => {
@@ -174,31 +227,45 @@ $(document).ready(function () {
     $(".checkBTN").click(function(){
       let item = localStorage.getItem('carts')
       if(item){
-        let arr =  JSON.parse(item);
-        let text =  "Hello welcome to "
-        for (let i = 0; i < arr.length; i++) {
-          let a = arr[i];
-          let total = (
-            parseFloat(a.price.replace("₦", "").replace(",", "")) * parseInt(a.qty)
-          ).toLocaleString();
 
+          location.href="checkout.html"
+//         let arr =  JSON.parse(item);
+//         let text =  "Hello welcome to"
+//         for (let i = 0; i < arr.length; i++) {
+//           let a = arr[i];
+//           let total = (
+//             parseFloat(a.price.replace("₦", "").replace(",", "")) * parseInt(a.qty)
+//           ).toLocaleString();
         
-        text +=`
+//         text +=`${a.id} x *${a.qty}*  ${total}` 
+//         }
+//         let firstNameInputValue = firstName.value;
+//         let lastNameInputValue = lastName.value;
+//         let addressInputValue = address.value;
+//         let cityInputValue = city.value;
+//         let telNumberInputValue = telNumber.value;
+//         let emailInputValue = email.value;
         
-        ${a.id} x *${a.qty}*  ${total}
-        
-        User Details
-        *Anestin Jude*
-        *abc@gmail.com*
-        *090876545672*
-        ` 
-        }
-
-        location.href=`https://wa.me/+2348121230526?text=${text}`
+//         text += `
+//         User Details
+//         *${firstNameInputValue}*
+//         *${lastNameInputValue}*
+//         *${addressInputValue}*
+//         *${cityInputValue}*
+//         *${telNumberInputValue}*
+//         *${emailInputValue}*
+//         `
+// //2347025514897
+//         location.href=`https://wa.me/+2348169971030?text=${text}`
 
       }
     })
   }
+
+
+
+
+  
 
 
 });

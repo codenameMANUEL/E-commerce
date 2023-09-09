@@ -4,39 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
+    <!-- NAVBAR  -->
+    <header>
+      <a href="index.html" class="logo">
+          <img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png" alt="">
+      </a>
 
-    <header class="navigation">
-        <nav class="nav">
-          <h3 class="nav-logo">
-            <img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png" alt="">
-          </h3>
-          <div class="nav-sub">
-            <input type="checkbox" id="menu" />
-            <ul class="nav-menu nav-menu__1"> 
-            </ul>
-            <ul class="nav-menu nav-menu__2 hide">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html" class="hide">About Us</a></li>
-                <li><a href="contact.html" class="hide">Contact Us</a></li>
-                <a href="cart.html">
-                    <li>
-                        <i class="gg-shopping-bag"></i>
-                        <span id="cart-item-count"></span>
-                    </li>
-                </a>
-            </ul>
-          </div>
-            <label for="menu" class="hamburger">
-                <i class='bx bx-dots-horizontal-rounded'></i>
-            </label>
-        </nav>
-      </header>
+      <input type="checkbox" id="check">
+      <label for="check" class="icons">
+          <i class='bx bx-dots-horizontal-rounded' id="menu-icon"></i>
+          <i class='bx bx-x' id="close-icon"></i>
+      </label>
 
+      <nav class="navbar">
+          <a href="index.html" style="--i:0;">HOME</a>
+          <a href="shop.html" style="--i:1;">SHOP</a>
+          <a href="about.html" style="--i:2;">ABOUT</a>
+          <a href="contact.html" style="--i:3;">CONTACT</a>
+          <a href="login.html" style="--i:3;">LOGIN</a>
+          <a href="cart.html" style="--i:4;">
+              <i class='bx bx-cart'></i>
+          </a>
+      </nav>
+  </header>
+  <!-- NAVBAR  -->
+
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>For enquiries, complians and recommendation, our contact is below.</p>
+    <p>Phone: +234 7025514897</p>
+    <p>Email: Cscbuddystore@gmail.com</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  
+</div>
     
 </body>
 </html>

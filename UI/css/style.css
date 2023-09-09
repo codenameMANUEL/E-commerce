@@ -10,22 +10,16 @@
     text-decoration: none;
     font-family: 'Inconsolata', monospace;
 }
-.navspacing{
-    margin-top: 100px;
-    position: relative;
-}
 
-/* nav starts here */
-
-/* nav stops here */
 
 /* section one starts here */
 .welcome_section {
     position: relative;
 }
 .welcome_section img{
-    border-radius: 0px 0px 50px 50px;
     height: 500px;
+    object-fit: cover;
+    object-position: top;
 }
 .welcome_text{
     position: absolute;
@@ -95,8 +89,11 @@
     padding: 20px 30px 0px 30px;
 }
 .icon_img{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FA8A28;
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
@@ -208,16 +205,22 @@ footer{
     width: 25px;
 }
 .footer_icon{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #989797;
     padding: 5px 5px 5px 6px;
     border-radius: 50%;
     margin: 4px;
 }
 .footer_icon:hover{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FA8A28;
     padding: 5px 5px 5px 6px;
     border-radius: 50%;
@@ -245,8 +248,9 @@ footer{
     justify-content: space-between;
 }
 .product_row{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 .container {
     position: relative;
@@ -254,12 +258,12 @@ footer{
     color: white;
 }
 .container img{
-    width: 280px;
-    height: 250px;
+    width: 100%;
+    height: 150px;
 }
 .product_list{
-    width: 280px;
-    background-color: #e9e2e1;
+    width: 100%;
+    background-color: #fcfcfc;
     color: #000000;
     margin: 20px 10px 0px 5px;
 }
@@ -328,111 +332,110 @@ footer{
     border: none;
     background-color: #FA8A28;
     cursor: pointer;
-    border-radius: 5px;
+}
+.product_btn button:hover{
+    padding: 10px 20px 5px 20px;
+    color: #ffff;
+    border: none;
+    background-color: #03579E;
+    cursor: pointer;
 }
 /* product page */
 
-/* checkout page */
 
-.checkout{
-    padding: 30px;
-    background: #f8f6f6;
-}
-.checkout h3{
-    font-size: 20px;
+/* CHECKOUT PAGE */
+   form{
+    padding: 40px 0px 0px 0px;
+   } 
+   .checkoutForm{
+    background-color: #f0eded;
+   }
+   form label{
+    font-size: 17px;
     font-weight: 600;
-}
-hr.dashed {
-    border-top: 2px dashed #FA8A28;
-    margin-bottom: 20px;
-}
-.details{
+    color: #383737;
+   }
+   .firstInitial{
     display: flex;
-}
-label{
-    font-size: 12px;
-}
-.clientInfo{
-    width: 45%;
-}
-input[type=text] {
-    width: 100%;
-    padding: 15px 0px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    font-size: 15px;
-}
-input[type=tel] {
-    width: 100%;
-    padding: 15px 0px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    font-size: 15px;
-}
-select {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #fff;
-    width: 550px;
-}
-
-/* Style the options within the select element */
-option {
-    font-size: 18px;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Style the selected option */
-option:checked {
-    color: #fff;
-}
-textarea{
-    width: 100%;
-    padding: 15px 0px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
+   }
+   .firstnamecheckout input{
+    width: 280px;
+    padding: 10px 0px 18px 10px;
     font-size: 20px;
-}
-.cartInfo{
-    width: 50%;
-    border: 1px solid #aaa9a7;
-    margin: 10px 10px 0px 210px;
-}
-.orderdetails{
-    padding: 40px 40px 0px 40px;
-    margin: 0px 50px 40px 40px;
-}
-.listing{
+    border: 1px solid #cecbcb;
+   }
+   .lastnamecheckout input{
+    width: 250px;
+    padding: 10px 0px 18px 10px;
+    font-size: 20px;
+    border: 1px solid #cecbcb;
+   }
+   .lastnamecheckout{
+    margin-left: 70px;
+   }
+   .addressCheckout{
+    margin-top: 20px;
+   }
+   .addressCheckout input{
+    width: 600px;
+    padding: 10px 0px 18px 10px;
+    font-size: 20px;
+    border: 1px solid #cecbcb;
+   }
+   .PhoneCheckout{
+    margin-top: 20px;
+   }
+   .PhoneCheckout input{
+    width: 600px;
+    padding: 10px 0px 18px 10px;
+    font-size: 20px;
+    border: 1px solid #cecbcb;
+   }
+   .cityAddress{
+    margin-top: 20px;
+   }
+   .cityAddress input{
+    width: 600px;
+    padding: 10px 0px 18px 10px;
+    font-size: 20px;
+    border: 1px solid #cecbcb;
+   }
+   .mailCheckout{
+    margin-top: 20px;
+   }
+   .mailCheckout input{
+    width: 600px;
+    padding: 10px 0px 18px 10px;
+    font-size: 20px;
+    border: 1px solid #cecbcb;
+   }
+   .formBTN{
     padding-top: 20px;
+   }
+   .formBTN button{
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #62f81d;
+    color: #ffff;
+    border: none;
+    cursor: pointer;
+   }
+   .formBTN button:hover{
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #2c8503;
+    color: #ffff;
+    border: none;
+    cursor: pointer;
+   }
+   .formDetails{
     display: flex;
-    justify-content: space-between;
-}
-
-.orderdetails button{
-    padding: 10px 60px 10px 60px;
-    margin-top: 50px;
-    font-size: 30px;
-    background-color: #13dd13;
-    color: #ffff;
-    border: none;
-    cursor: pointer;
-}
-.orderdetails button:hover{
-    padding: 10px 60px 10px 60px;
-    margin-top: 50px;
-    font-size: 30px;
-    background-color: #09bd09;
-    color: #ffff;
-    border: none;
-    cursor: pointer;
-}
-thead{
-    text-align: left;
-}
-/* checkout page */
-
+   }
+   .loko{
+    margin: 20px 60px 20px 60px;
+    width: 800px;
+    border: 1px solid #989797;
+   }
+/* CHECKOUT PAGE */

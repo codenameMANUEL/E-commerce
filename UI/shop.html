@@ -7,14 +7,15 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mediaQuery.css">
-    <link rel="stylesheet" href="navbar.css">
+    
 </head>
 
 <body>
-    <!-- NAVBAR  -->
+    <!-- NAVBAR -->
     <header>
         <a href="index.html" class="logo">
             <img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png" alt="">
@@ -31,21 +32,21 @@
             <a href="shop.html" style="--i:1;">SHOP</a>
             <a href="about.html" style="--i:2;">ABOUT</a>
             <a href="contact.html" style="--i:3;">CONTACT</a>
+            <a href="login.html" style="--i:3;">LOGIN</a>
             <a href="cart.html" style="--i:4;">
-                <span id="cart-item-count"></span>
                 <i class='bx bx-cart'></i>
             </a>
         </nav>
     </header>
-    <!-- NAVBAR  -->
+        <!-- NAVBAR  -->
 
-    <div class="shop_view navspacing">
+    <div class="shop_view" style="margin-top: 70px;">
         <div class="component_tag">
             <p>Shop</p>
         </div>
         <div class="shop_view_selection">
             <div>
-                <p>Show all available products</p>
+                <p>Showing all available products</p>
             </div>
             <div>
                 <select name="" id="" class="sort">
@@ -57,22 +58,6 @@
         </div>
 
         <div class="product_row">
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
-            </div>
             <!-- <div class="product_list">
                 <div class="container">
                     <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -88,134 +73,6 @@
                     <p class="new_price">&#8358;20,000</p>
                 </div>
                 <button class="add_to_cart" id="addToCart">ADD TO CART</button>
-            </div>
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
-            </div>
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
-            </div>
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
-            </div>
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
-            </div>
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
-            </div>
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart" id="addToCart">ADD TO CART</button>
-            </div>
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart" data-attr="2222">ADD TO CART</button>
-            </div>
-            <div class="product_list">
-                <div class="container">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
-                        <div class="top-right" >
-                            <p>sale</p>
-                        </div>
-                </div>
-                <p style="padding-top: 5px; font-size: 20px;" class="product_name">Versace</p>
-                <p style="font-size: 14px;" class="product_id">ZFRT98</p>
-                <div class="price_diff">
-                    <p class="old_price">&#8358;40,000</p>
-                    <p class="new_price">&#8358;20,000</p>
-                </div>
-                <button class="add_to_cart"  data-attr="1234">ADD TO CART</button>
             </div> -->
         </div>
     </div>
