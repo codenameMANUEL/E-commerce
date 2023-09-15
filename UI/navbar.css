@@ -18,6 +18,7 @@ header img{
     align-items: center;
     z-index: 99;
     position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   header::before{
     content: "";
