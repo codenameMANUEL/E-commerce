@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stickycart.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
 </head>
 <body>
     
@@ -29,39 +32,95 @@
           <a href="about.html" style="--i:2;">ABOUT</a>
           <a href="contact.html" style="--i:3;">CONTACT</a>
           <a href="login.html" style="--i:3;">LOGIN</a>
-          <a href="cart.html" style="--i:4;">
-              <i class='bx bx-cart'><span id="cart-item-count"></span></i>
-          </a>
       </nav>
   </header>
   <!-- NAVBAR  -->
 
-
-<div class="container">
-  <div style="text-align:center">
-    <h2>Contact Us</h2>
-    <p>For enquiries, complians and recommendation, our contact is below.</p>
-    <p>Phone: +234 7025514897</p>
-    <p>Email: Cscbuddystore@gmail.com</p>
-  </div>
-  <div class="row">
-    <div class="column">
-      <img src="Img/buddy-stores-low-resolution-logo-color-on-transparent-background.png">
+  <div>
+    <span id="cart-item-count"></span>
+<div class="stickyCart">
+    <div class="cartimg">
+        <a href="cart.html">
+            <i class='bx bx-cart'></i>
+        </a>
     </div>
-    <div class="column">
-      <form action="/action_page.php">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-  </div>
-  
 </div>
+</div>
+
+<div class="contact container">
+  <form>
+      <div class="form">
+          <div class="form-txt">
+              <h1>Contact Us</h1>
+              <span>We would love to hear from you about our product, please feel free to fill the contact below or give us a call.</span>
+              <h3>contact👇</h3>
+              <hr> 
+              <div style="padding-top: 20px;">
+                <p>cscbuddystore@gmail.com</p>
+                <p style="padding-top: 20px;">+2347025514897</p>
+              </div>
+          </div>
+          <div class="form-details">
+              <input type="text" name="name" id="name" placeholder="Name" required>
+              <input type="email" name="email" id="email" placeholder="Email" required>
+              <textarea name="message" id="message" cols="52" rows="7" placeholder="Message" required></textarea>
+              <button>SEND MESSAGE</button>
+          </div>
+      </div>
+  </form>
+</div>
+
+<!-- footer -->
+
+<footer>
+    <div class="footer_col_one">
+        <p class="footer_brand_name">
+            <a href="index.html" style="text-decoration: none; color: #ffff;">Buddystore.com</a>
+        </p>
+        <p>We are your number one source for all quality products [shoes, bags, belts, wristwatches, sunglasses and more].</p>
+        <div class="footer_icon_row">
+            <div class="footer_icon">
+                <img src="https://img.icons8.com/?size=512&id=118466&format=png" alt="">
+            </div>
+            <div class="footer_icon">
+                <img src="https://img.icons8.com/?size=512&id=59813&format=png" alt="">
+            </div>
+            <div class="footer_icon">
+                <img src="https://img.icons8.com/?size=512&id=62855&format=png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <ul>
+            <p class="footer_tag_head">
+                <a href="shop.html" style="text-decoration: none; color: #FA8A28;">SHOP</a>
+            </p>
+            <li>All collection</li>
+            <li>Featured Products</li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <p class="footer_tag_head">COMPANY</p>
+            <li>About Us</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <p class="footer_tag_head">SUPPORT</p>
+            <li>FAQ's</li>
+            <li>Terms and conditions</li>
+        </ul>
+    </div>
+</footer>
+
+
+<!-- footer -->
+
     
 </body>
 </html>

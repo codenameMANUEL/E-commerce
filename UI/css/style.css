@@ -3,13 +3,24 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    ::selection{
-        background-color: #FA8A28;
-    }
     list-style: none;
     text-decoration: none;
     font-family: 'Inconsolata', monospace;
 }
+#cart-item-count{
+    position: fixed;
+    background: #03579E;
+    display: block;
+    z-index: 10000;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    bottom: 61px;
+    padding: 5px;
+    right: 15px;
+    border-radius: 50%;
+    color: #fff;
+}   
 
 
 /* section one starts here */

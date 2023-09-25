@@ -1,0 +1,23 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-bag.css');
+
+.stickyCart{
+    background-color: #FA8A28;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    right: 0;
+    padding-top: 14px;
+    margin-right: 10px;
+}
+.cartimg{
+    font-size: 30px;
+}
+.cartimg a{
+    display: flex;
+    justify-content: center;
+    color: #03579E;
+
+}

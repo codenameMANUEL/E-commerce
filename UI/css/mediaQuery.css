@@ -50,6 +50,18 @@
     .sm-one{
         margin: 70px 0px 0px 0px;
     }
+    .centered {
+        background-color: #FA8A28;
+        color: #ffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 20px 10px 20px;
+        border-radius: 5px;
+    }
     .row_item_text_one {
         font-size: 25px;
         font-weight: 600;
@@ -63,6 +75,9 @@
         height: 60%;
         margin: 10px;
         border-radius: 10px;
+    }
+    .featured_products_img img{
+        width: 100%;
     }
     /* featured_products */
 
@@ -93,7 +108,8 @@
     .footer_tag_head{
         color: #FA8A28;
         font-size: 20px;
-        margin-top: 25px;
+        margin-top: 40px;
+        padding: 0px;
     }
     /* footer */
 
@@ -216,5 +232,72 @@
     }
     /* CART PAGE  */
 }
-
+    @media (min-width: 768px){
+        a{
+            color: #fff;
+        }
+        .featured_products_row img{
+            width: 220px;
+        }
+        .centered{
+            width: 170px;
+        }
+        .centered {
+            background-color: #FA8A28;
+            color: #ffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            text-align: center;
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+        footer {
+            display: block;
+            justify-content: space-between;
+            padding: 60px 30px 0px 30px;
+            background-color: #2b2a2a;
+            color: #ffff;
+        }
+        .footer_icon_row {
+            display: flex;
+            padding-top: 20px;
+        }
+        .footer_tag_head {
+            padding-bottom: 0px;
+            color: #FA8A28;
+        }
+        .footer-div{
+            margin: 25px 0px;
+        }
+        .loko{
+            display: none;
+        }
+        .unavaliablelist{
+            padding-top: 100px;
+        }
+    }
+    @media (min-width: 1024px){
+        .product_row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .featured_products_row img {
+            width: 100%;
+            padding: 0px 10px;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 30px 0px 30px;
+            background-color: #2b2a2a;
+            color: #ffff;
+        }
+        .cartIntro{
+            padding-top: 100px;
+        }
+    }
 /* all mobile screen */

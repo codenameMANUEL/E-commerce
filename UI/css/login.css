@@ -1,4 +1,4 @@
-/* Full-width input fields */
+ /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -115,4 +115,4 @@ input[type=text], input[type=password] {
     .cancelbtn {
        width: 100%;
     }
-  }
+  } 

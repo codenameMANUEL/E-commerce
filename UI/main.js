@@ -90,7 +90,7 @@ $(document).ready(function () {
       url: "https://e-commerce-0r6p.onrender.com/products",
       success: (arr) => {
         let html = "";
-       
+        $(".lds-ripple").hide()
         for (let i = 0; i < arr.length; i++) {
           let a = arr[i];
           let total = (
@@ -175,12 +175,14 @@ $(document).ready(function () {
     if(item){
      
       let arr =  JSON.parse(item);
-      let text =  "Hello welcome to %0D"
+      let text =  "Hi BuddyStores, here are my order %0D"
       for (let i = 0; i < arr.length; i++) {
         let a = arr[i];
         let total = (
           parseFloat(a.price.replace("₦", "").replace(",", "")) * parseInt(a.qty)
         ).toLocaleString();
+
+        console.log("hzcbdhbchzbjcnajcndj")
       
       text +=`${a.id} x *${a.qty}*  ${total} %0D` 
       }
@@ -201,8 +203,8 @@ $(document).ready(function () {
       localStorage.clear()
       
       // location.href="https://google.com"
-      location.href=`https://wa.me/+2348169971030?text=${text}`
-//2347025514897
+      location.href=`https://wa.me/+2347025514897?text=${text}`
+
       
 
     }

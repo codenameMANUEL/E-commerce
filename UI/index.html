@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="css/mediaQuery.css">
     <link rel="stylesheet" href="navbar.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/stickycart.css">
 </head>
 <body>
+    
     
     <!-- NAVBAR -->
     <header>
@@ -29,12 +31,11 @@
             <a href="about.html" style="--i:2;">ABOUT</a>
             <a href="contact.html" style="--i:3;">CONTACT</a>
             <a href="login.html" style="--i:3;">LOGIN</a>
-            <a href="cart.html" style="--i:4;">
-                <i class='bx bx-cart'><span id="cart-item-count"></span></i>
-            </a>
         </nav>
     </header>
     <!-- NAVBAR  -->
+
+        
 
         <div class="welcome_section">
             <img src="https://images.pexels.com/photos/8676760/pexels-photo-8676760.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="shopping_cart" style="width:100%;">
@@ -51,6 +52,7 @@
             </div>
         </div>
 
+
         <div class="promise">
              <div class="promise_one">
                 <p>We provide best customer experiences</p>
@@ -58,6 +60,15 @@
              <div class="promise_two">
                 <p><span style="padding-right: 20px;">|</span>We ensure our customers the best shopping experience</p>
              </div>
+        </div>
+
+        <span id="cart-item-count"></span>
+        <div class="stickyCart">
+            <div class="cartimg">
+                <a href="cart.html">
+                    <i class='bx bx-cart'></i>
+                </a>
+            </div>
         </div>
 
         <div class="guarantee_section">
@@ -87,13 +98,13 @@
         <div class="featured_products">
             <p>Featured Products</p>
             <div class="featured_products_row">
-                <div class="featured_products_img">
+                <div class="featured_products_img leftimg">
                     <img src="https://images.pexels.com/photos/1191526/pexels-photo-1191526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
                     <div class="centered sm-one">
                         <a href="shop.html">Shop Now <span>></span></a>
                     </div>
                 </div>
-                <div class="featured_products_img">
+                <div class="featured_products_img centerimg">
                     <img src="https://images.pexels.com/photos/16656625/pexels-photo-16656625/free-photo-of-man-with-sunglasses-against-green-light.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
                     <div class="centered">
                         <a href="shop.html">Shop Now <span>></span></a>
@@ -124,7 +135,9 @@
 
         <footer>
             <div class="footer_col_one">
-                <p class="footer_brand_name">Buddystore.com</p>
+                <p class="footer_brand_name">
+                    <a href="index.html" style="text-decoration: none; color: #ffff;">Buddystore.com</a>
+                </p>
                 <p>We are your number one source for all quality products [shoes, bags, belts, wristwatches, sunglasses and more].</p>
                 <div class="footer_icon_row">
                     <div class="footer_icon">
@@ -139,15 +152,17 @@
                 </div>
             </div>
 
-            <div>
+            <div class="footer-div">
                 <ul>
-                    <p class="footer_tag_head">SHOP</p>
+                    <p class="footer_tag_head">
+                        <a href="shop.html" style="text-decoration: none; color: #FA8A28;">SHOP</a>
+                    </p>
                     <li>All collection</li>
                     <li>Featured Products</li>
                 </ul>
             </div>
 
-            <div>
+            <div class="footer-div">
                 <ul>
                     <p class="footer_tag_head">COMPANY</p>
                     <li>About Us</li>
@@ -155,7 +170,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="footer-div">
                 <ul>
                     <p class="footer_tag_head">SUPPORT</p>
                     <li>FAQ's</li>
@@ -163,7 +178,7 @@
                 </ul>
             </div>
         </footer>
-
+        
         <!-- footer -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="main.js"></script>

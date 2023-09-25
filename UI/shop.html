@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mediaQuery.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/stickycart.css">
     
 </head>
 
@@ -33,9 +35,6 @@
             <a href="about.html" style="--i:2;">ABOUT</a>
             <a href="contact.html" style="--i:3;">CONTACT</a>
             <a href="login.html" style="--i:3;">LOGIN</a>
-            <a href="cart.html" style="--i:4;">
-                <i class='bx bx-cart'><span id="cart-item-count"></span></i>
-            </a>
         </nav>
     </header>
     <!-- NAVBAR  -->
@@ -55,6 +54,21 @@
                     <option value="">Sort by price: High to Low</option>
                 </select>
             </div>
+        </div>
+
+        <div class="center">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>
+
+        <div>
+            <span id="cart-item-count"></span>
+        <div class="stickyCart">
+            <div class="cartimg">
+                <a href="cart.html">
+                    <i class='bx bx-cart'></i>
+                </a>
+            </div>
+        </div>
         </div>
 
         <div class="product_row">
@@ -79,11 +93,12 @@
 
     <!-- footer -->
 
-    <footer class="shop">
+    <footer>
         <div class="footer_col_one">
-            <p class="footer_brand_name">Buddystore.com</p>
-            <p>We are your number one source for all quality products [shoes, bags, belts, wristwatches, sunglasses and
-                more].</p>
+            <p class="footer_brand_name">
+                <a href="index.html" style="text-decoration: none; color: #ffff;">Buddystore.com</a>
+            </p>
+            <p>We are your number one source for all quality products [shoes, bags, belts, wristwatches, sunglasses and more].</p>
             <div class="footer_icon_row">
                 <div class="footer_icon">
                     <img src="https://img.icons8.com/?size=512&id=118466&format=png" alt="">
@@ -97,32 +112,35 @@
             </div>
         </div>
 
-        <div>
+        <div class="footer-div">
             <ul>
-                <li class="footer_tag_head">SHOP</li>
+                <p class="footer_tag_head">
+                    <a href="shop.html" style="text-decoration: none; color: #FA8A28;">SHOP</a>
+                </p>
                 <li>All collection</li>
                 <li>Featured Products</li>
             </ul>
         </div>
 
-        <div>
+        <div class="footer-div">
             <ul>
-                <li class="footer_tag_head">COMPANY</li>
+                <p class="footer_tag_head">COMPANY</p>
                 <li>About Us</li>
                 <li>Contact</li>
             </ul>
         </div>
 
-        <div>
+        <div class="footer-div">
             <ul>
-                <li class="footer_tag_head">SUPPORT</li>
+                <p class="footer_tag_head">SUPPORT</p>
                 <li>FAQ's</li>
                 <li>Terms and conditions</li>
             </ul>
         </div>
     </footer>
-
+    
     <!-- footer -->
+   
 
     <script src="main.js"></script>
 
