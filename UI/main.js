@@ -98,7 +98,7 @@ $(document).ready(function () {
             parseInt(a.qty)
           ).toLocaleString();
           html += `<div class="product_list">
-          <a href="/ui/product.html?id=${a._id}">
+          <a href="product.html?id=${a._id}">
           <div class="container">
               <img src="${a.avatar}"
                   alt="">
