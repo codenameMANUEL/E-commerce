@@ -59,7 +59,7 @@ $(document).ready(function () {
     for (let i = 0; i < arr.length; i++) {
       let a = arr[i];
       let total = (
-        parseFloat(a.price.replace("₦", "").replace(",", "")) * parseInt(a.qty)
+        parseFloat(a.price.toString().replace("₦", "").replace(",", "")) * parseInt(a.qty)
       ).toLocaleString();
       html += ` <tr>
             <td><img src="${a.img}"></td>
@@ -98,6 +98,7 @@ $(document).ready(function () {
             parseInt(a.qty)
           ).toLocaleString();
           html += `<div class="product_list">
+          <a href="/ui/product.html?id=${a._id}">
           <div class="container">
               <img src="${a.avatar}"
                   alt="">
@@ -111,8 +112,10 @@ $(document).ready(function () {
               <p class="old_price">&#8358;${a.old_price}</p>
               <p class="new_price">&#8358;${a.price}</p>
           </div>
+          </a>
+          
           <button class="add_to_cart" data-attr="${a.productId}">ADD TO CART</button>
-      </div>`;
+          </div>`;
         }
         $(".product_row").html(html);
       },
@@ -204,9 +207,6 @@ $(document).ready(function () {
       
       // location.href="https://google.com"
       location.href=`https://wa.me/+2347025514897?text=${text}`
-
-      
-
     }
 
   });

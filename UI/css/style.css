@@ -259,7 +259,7 @@ footer{
     justify-content: space-between;
 }
 .product_row{
-    display: grid;
+    display: grid;  
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
@@ -277,6 +277,9 @@ footer{
     background-color: #fcfcfc;
     color: #000000;
     margin: 20px 10px 0px 5px;
+}
+.product_list a{
+    color: black;
 }
 .product_list button{
     margin-top: 10px;

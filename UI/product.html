@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/mediaQuery.css">
     <link rel="stylesheet" href="css/stickycart.css">
 </head>
+
 <body>
 
     <!-- NAVBAR -->
@@ -35,41 +37,48 @@
 
     <div>
         <span id="cart-item-count"></span>
-    <div class="stickyCart">
-        <div class="cartimg">
-            <a href="cart.html">
-                <i class='bx bx-cart'></i>
-            </a>
+        <div class="stickyCart">
+            <div class="cartimg">
+                <a href="cart.html">
+                    <i class='bx bx-cart'></i>
+                </a>
+            </div>
         </div>
     </div>
-    </div>
-   
+
     <!-- product page -->
-        
-        <div>
-            <div class="product_view">
-                <div class="product_img">
-                    <img src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+
+    <div style="padding-top: 100px;">
+        <div class="product_view">
+            <div class="product_img">
+                <img class="img" src="https://images.pexels.com/photos/13936049/pexels-photo-13936049.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </div>
+            <div class="desc">
+                <p class="product_categ">Unique</p>
+                <p class="product_sku">PRA84061</p>
+                <div style="display: flex;" class="price_diff">
+                    <p style="text-decoration: line-through; color: #989797; padding-right: 20px;" class="old_price">
+                        &#8358;46,000.00 </p>
+                    <p class="new_price">&#8358;35,000.00</p>
                 </div>
-                <div class="desc">
-                    <p class="product_categ">Unique</p>
-                    <p class="product_sku">PRA84061</p>
-                    <div style="display: flex;" class="price_diff">
-                        <p style="text-decoration: line-through; color: #989797; padding-right: 20px;">&#8358;46,000.00 </p>
-                        <p>&#8358;35,000.00</p>
+                <p class="product_desc">Use these sharp sunglasses to keep harmful rays at bay or simply as a styling
+                    accessory when your look needs a little extra flair. With unmatched versatility and comfort, this
+                    all-season style will become a go-to choice. This design adds an on-trend edge to an everyday
+                    wardrobe. Boasting 100% UV protection, these lenses will help keep eyes safe from the sun’s harmful
+                    rays. For outdoor lovers, these lenses are fitted with anti-reflective technology that is designed
+                    to reduce glare and protect the eyes from harmful UV rays.
+                </p>
+                <div class="product_add_to_cart">
+                    <div>
                     </div>
-                    <p class="product_desc">Use these sharp sunglasses to keep harmful rays at bay or simply as a styling accessory when your look needs a little extra flair. With unmatched versatility and comfort, this all-season style will become a go-to choice. This design adds an on-trend edge to an everyday wardrobe. Boasting 100% UV protection, these lenses will help keep eyes safe from the sun’s harmful rays. For outdoor lovers, these lenses are fitted with anti-reflective technology that is designed to reduce glare and protect the eyes from harmful UV rays.
-                    </p>
-                    <div class="product_add_to_cart">
-                        <div>
-                        </div>
-                        <div class="product_btn">
-                            <button>ADD TO CART</button>
-                        </div>
+                    <div class="product_btn">
+                        <button onclick="addCart()">ADD TO CART</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- product page -->
 
@@ -80,7 +89,8 @@
     <footer>
         <div class="footer_col_one">
             <p class="footer_brand_name">Buddystore.com</p>
-            <p>We are your number one source for all quality products [shoes, bags, belts, wristwatches, sunglasses and more].</p>
+            <p>We are your number one source for all quality products [shoes, bags, belts, wristwatches, sunglasses and
+                more].</p>
             <div class="footer_icon_row">
                 <div class="footer_icon">
                     <img src="https://img.icons8.com/?size=512&id=118466&format=png" alt="">
@@ -120,8 +130,66 @@
     </footer>
 
     <!-- footer -->
-    
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="main.js"></script>
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let product_id = urlParams.get("id");
+        let product = {};
+        // console.log(product_id);
+        $.ajax({
+            method: "GET",
+            url: "https://e-commerce-0r6p.onrender.com/products/" + product_id,
+            success: (res) => {
+               
+                product = res;
+                $('.product_desc').html(res.desc)
+                $('.img').attr('src', res.avatar)
+                $(".new_price").html("&#8358;" + res.price)
+                $(".old_price").html("&#8358;" + res.old_price)
+                $('.add_to_cart').attr("data-attr", res.productId)
+            }
+        })
+
+        function addCart() {
+            let arr = [];
+            let qty = 1;
+
+            if (localStorage.getItem("carts")) {
+                arr = JSON.parse(localStorage.getItem("carts"));
+                let item = arr.find((x) => x.id == id);
+                if (item) {
+                    item.qty++;
+                } else {
+                    arr.push({
+                        id:product.productId,
+                        qty,
+                        price:product.price,
+                        img:product.avatar,
+                    });
+                }
+            } else {
+                arr.push({
+                    id:product.productId,
+                    qty,
+                    price:product.price,
+                    img:product.avatar,
+                });
+            }
+            localStorage.setItem("carts", JSON.stringify(arr));
+            countCartItem();
+        }
+        function countCartItem() {
+            let count = 0;
+            if (localStorage.getItem("carts")) {
+                arr = JSON.parse(localStorage.getItem("carts"));
+                count = arr.length;
+            }
+
+            $("#cart-item-count").html(count);
+        }
+    </script>
 </body>
+
 </html>
